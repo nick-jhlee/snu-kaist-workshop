@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:title" content="Korean AI Theory Community Workshop">
+    <meta property="og:image" content="image/workshop.png">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Mathjax (LaTex support) -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+          
+    <!-- Style -->
+    <link rel="stylesheet" href="css/button_style.css">
+    <title>Workshop Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            margin: 5px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .contact {
+            background-color: #d4e1f7;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .session-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .session-info {
+            margin-bottom: 20px;
+        }
+        .double-line {
+            border-top: 3px double black;
+        }
+        .footer {
+            text-align: center;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        h3 {
+            color: #0d6efd;
+            font-size: 1.1rem;
+            font-weight: 1000;
+        }
+        h4 {
+            color: #000000;
+            font-size: 1.1rem;
+            font-weight: 1000;
+        }
+        h5 {
+            color: #000000;
+            font-size: 0.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .tab-container {
+            width: 100%;
+            margin: 20px auto;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab-link {
+            background-color: #f1f1f1;
+            border: none;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab-link:hover {
+            background-color: #ddd;
+        }
+        .tab-link.active {
+            background-color: #ccc;
+        }
+        .tab-content {
+            padding: 16px;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        
+        /* Make table responsive */
+        @media (max-width: 600px) {
+                table {
+                    display: block;
+                    overflow-x: auto;
+                }
+            }
+    </style>
+    <style>
+        .image {
+            display: grid;
+            place-items: center;
+            /* height: 100vh; Adjust height as needed */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body id="page-top">
+    
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container-lg px-5">
+            <a class="navbar-brand" href="https://kim-minseon.github.io/colloquium">Colloquium</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://nick-jhlee.github.io/">Organizer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <div class="container">
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container-lg px-5 text-center">
+                <h1 class="fw-bolder">SNU-KAIST AI/ML Theory Workshop</h1>
+            </div>
+        </header>
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab-link active" onclick="loadContent('day1.html')">Day 1</button>
+            <button class="tab-link" onclick="loadContent('day2.html')">Day 2</button>
+            <button class="tab-link" onclick="loadContent('day3.html')">Day 3</button>
+        </div>
+        <div class="tab-content" id="tab-content">
+            <!-- Content will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        function loadContent(url) {
+            console.log(`Loading content from ${url}`);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    console.log(`Request to ${url} completed with status ${this.status}`);
+                    if (this.status == 200) {
+                        document.getElementById("tab-content").innerHTML = this.responseText;
+                        updateActiveTab(url);
+                    } else {
+                        console.error(`Failed to load content from ${url}`);
+                    }
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        function updateActiveTab(url) {
+            var tablinks = document.getElementsByClassName("tab-link");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+                if (tablinks[i].getAttribute("onclick").includes(url)) {
+                    tablinks[i].classList.add("active");
+                }
+            }
+        }
+
+        // Load the default tab content
+        window.onload = function() {
+            loadContent('day1.html');
+        };
+    </script>
+</body>
+</html>
