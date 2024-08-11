@@ -23,18 +23,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Mathjax (LaTex support) -->
+    <!-- MathJax Configuration -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-      </script>
-      <script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-      </script>
-          
-    <!-- Style -->
-    <link rel="stylesheet" href="css/button_style.css">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']]
+            }
+        });
+    </script>
+    <!-- MathJax Script -->
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
     <title>Workshop Schedule</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Style -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -139,6 +143,36 @@
         .tab-pane.active {
             display: block;
         }
+        .poster-abstract {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .poster-title {
+            cursor: pointer;
+            /* color: blue; */
+            /* text-decoration: underline; */
+        }
+
+        .toggle-abstract {
+            margin-left: 8px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: none;
+            padding: 3px 8px; /* Reduced padding */
+            border-radius: 3px; /* Reduced border-radius */
+            font-size: 0.9em; /* Reduced font-size */
+        }
+
+        .toggle-abstract.show {
+            background-color: green;
+            color: white;
+        }
+
+        .toggle-abstract.hide {
+            background-color: red;
+            color: white;
+        }
         
         /* Make table responsive */
         @media (max-width: 600px) {
@@ -159,6 +193,8 @@
             height: auto;
         }
     </style>
+
+    <script src="scripts.js" defer></script>
 </head>
 <body id="page-top">
     
@@ -182,7 +218,8 @@
         </header>
     <div class="tab-container">
         <div class="tabs">
-            <button class="tab-link active" onclick="loadContent('day1.html')">Day 1</button>
+            <button class="tab-link active" onclick="loadContent('poster.html')">Poster</button>
+            <button class="tab-link" onclick="loadContent('day1.html')">Day 1</button>
             <button class="tab-link" onclick="loadContent('day2.html')">Day 2</button>
             <button class="tab-link" onclick="loadContent('day3.html')">Day 3</button>
         </div>
@@ -201,6 +238,7 @@
                     if (this.status == 200) {
                         document.getElementById("tab-content").innerHTML = this.responseText;
                         updateActiveTab(url);
+                        attachToggleListeners(); // Attach event listeners after content is loaded
                     } else {
                         console.error(`Failed to load content from ${url}`);
                     }
@@ -220,10 +258,38 @@
             }
         }
 
+        function attachToggleListeners() {
+            var toggleButtons = document.querySelectorAll('.toggle-abstract');
+            console.log('Number of toggle buttons found:', toggleButtons.length);
+            
+            toggleButtons.forEach(function(button) {
+                console.log('Attaching event listener to button');
+                button.addEventListener('click', function() {
+                    console.log('Button clicked');
+                    var posterAbstract = this.nextElementSibling;
+                    if (posterAbstract.style.display === 'none' || posterAbstract.style.display === '') {
+                        posterAbstract.style.display = 'block';
+                        this.textContent = 'Hide Abstract';
+                        this.classList.remove('show');
+                        this.classList.add('hide');
+                    } else {
+                        posterAbstract.style.display = 'none';
+                        this.textContent = 'Show Abstract';
+                        this.classList.remove('hide');
+                        this.classList.add('show');
+                    }
+                });
+            });
+        }
+
         // Load the default tab content
         window.onload = function() {
-            loadContent('day1.html');
+            loadContent('poster.html');
         };
     </script>
+    <br>
+    <div class="footer">
+        <p>This website format is copied from the website of <a href="https://kim-minseon.github.io/colloquium.html">KAIST AI Safety Colloquium</a> organized by <a href="https://kim-minseon.github.io/">Minseon Kim</a>, to whom the organizer is indebted to.</p>
+    </div>
 </body>
 </html>

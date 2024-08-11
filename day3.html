@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Schedule - Day 1</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Workshop Schedule - Day 3</title>
+</script>
 </head>
 <body>
     <table>
@@ -21,7 +21,7 @@
             </tr>
             <tr>
                 <td>09:30 - 09:55</td>
-                <td><b><a href="">Hyunsik Chae</a></b><br>PhD Student<br><a href="https://www.math.snu.ac.kr/">SNU Math</a></td>
+                <td><b>Hyunsik Chae</b><br>PhD Student<br><a href="https://www.math.snu.ac.kr/" target="_blank">SNU Math</a></td>
                 <td><h3>Atomic Visual Skills</h3></td>
             </tr>
             <tr>
@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>10:00 - 10:25</td>
-                <td><b><a href="https://scholar.google.com/citations?user=nJ_B61sAAAAJ&hl=ko">Wooseong Cho</a></b><br>MSc-PhD Student<br><a href="https://gsds.snu.ac.kr/">SNU DS</a></td>
+                <td><b><a href="https://scholar.google.com/citations?user=nJ_B61sAAAAJ&hl=ko" target="_blank">Wooseong Cho</a></b><br>MSc-PhD Student<br><a href="https://gsds.snu.ac.kr/" target="_blank">SNU DS</a></td>
                 <td><h3>Randomized Exploration for Reinforcement Learning with Multinomial Logistic Function Approximation</h3></td>
             </tr>
             <tr>
@@ -41,14 +41,83 @@
             </tr>
             <tr>
                 <td>10:30 - 11:00</td>
-                <td><b><a href="https://scholar.google.com/citations?user=WJuTs9MAAAAJ&hl=ko">Jaeyoung Cha</a></b><br>PhD Student<br><a href="https://gsai.kaist.ac.kr/">KAIST AI</a></td>
+                <td><b><a href="https://scholar.google.com/citations?user=WJuTs9MAAAAJ&hl=ko" target="_blank">Jaeyoung Cha</a></b><br>PhD Student<br><a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST AI</a></td>
                 <td><h3>Tight Bounds and Convergence Analysis of Shuffling SGD for Finite-Sum Minimization</h3></td>
             </tr>
             <tr class="double-line session-header">
                 <td>11:00 - </td>
-                <td colspan="2"><b><b>Lunch:</b> 교직원식당 @KAIST Seoul Campus</b>, Back to home</td>
+                <td colspan="2"><b><b>Lunch:</b> 금강숯불닭갈비 메밀막국수 (양념2 + 간장2 + 물막국수x31)</b>, Back to home</td>
             </tr>
         </tbody>
     </table>
+
+    <br>
+    <h1>Students' Oral Presentation #3</h1>
+            <div class="session-box">
+            <div class="session-box">
+                <div class="session-info">
+                    <h3>Talk #1 (Hyunsik Chae): Atomic Visual Skills</h3>
+                </div>
+                <div class="abstract">
+                    <h4>Abstract:</h4>
+                    <p>
+                        Recent advancements in Vision Language Models (VLMs) like ChatGPT have highlighted their prowess in multi-modal reasoning tasks, 
+                        yet these models falter at simple visual tasks involving basic geometric notions such as orthogonality and counting. 
+                        This research contrasts these challenges with the known limitations of Large Language Models (LLMs) in basic arithmetic, 
+                        underscoring a similar gap in VLMs for basic visual tasks. Unlike LLMs, there lacks a benchmark for assessing VLMs on these elementary skills. 
+                        We aim to introduce a new benchmark that tests VLMs, including models like ChatGPT, Claude, and LLaVA, on fundamental visual concepts 
+                        like angle acuteness, parallel lines, and convex shapes, which are intuitive to humans without formal calculations. 
+                        Our early findings disclose significant deficiencies in VLMs' understanding of simple geometric principles, 
+                        indicating that these basic perceptual skills are crucial for developing more sophisticated visual reasoning capabilities. 
+                        We argue for a structured exploration of VLM capabilities in recognizing and processing basic visual information, 
+                        moreover hypothesizing that complex visual reasoning builds upon these atomes of perceptual units.
+                    </p>
+                </div>
+            </div>
+
+            <div class="session-box">
+                <div class="session-info">
+                    <h3>Talk #2 (Wooseong Cho): Randomized Exploration for Reinforcement Learning with Multinomial Logistic Function Approximation</h3>
+                </div>
+                <div class="abstract">
+                    <h4>Abstract:</h4>
+                    <p>
+                        We study reinforcement learning with multinomial logistic (MNL) function approximation where the underlying transition probability kernel 
+                        of the Markov decision processes (MDPs) is parametrized by an unknown transition core with features of state and action. 
+                        For the finite horizon episodic setting with inhomogeneous state transitions, we propose provably efficient algorithms 
+                        with randomized exploration having frequentist regret guarantees. 
+                        For our first algorithm, RRL-MNL, we adapt optimistic sampling to ensure the optimism of the estimated value function 
+                        with sufficient frequency and establish that RRL-MNL is both statistically and computationally efficient, 
+                        achieving a $\tilde{\mathcal{O}}(\kappa^{-1} d^{\frac{3}{2}} H^{\frac{3}{2}} \sqrt{T})$ frequentist regret bound with constant-time computational cost per episode. 
+                        Here, $d$ is the dimension of the transition core, $H$ is the horizon length, $T$ is the total number of steps, and $\kappa$ is a problem-dependent constant. 
+                        Despite the simplicity and practicality of RRL-MNL, $\kappa^{-1}$, which is potentially large in the worst case. 
+                        To improve the dependence on $\kappa^{-1}$, we propose ORRL-MNL, which estimates the value function using local gradient information of the MNL transition model. 
+                        We show that its frequentist regret bound is $\tilde{\mathcal{O}}(d^{\frac{3}{2}} H^{\frac{3}{2}} \sqrt{T} + \kappa^{-1} d^2 H^2)$. 
+                        To the best of our knowledge, these are the first randomized RL algorithms for the MNL transition model that achieve both computational and statistical efficiency. 
+                        Numerical experiments demonstrate the superior performance of the proposed algorithms.
+                        This is a joint work with Taehyun Hwang (SNU DS), Joongkyu Lee (SNU DS) and Min-hwan Oh (SNU DS), and is available at <a href="https://arxiv.org/abs/2405.20165" target="_blank">https://arxiv.org/abs/2405.20165</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="session-box">
+                <div class="session-info">
+                    <h3>Talk #3 (Jaeyoung Cha): Tight Bounds and Convergence Analysis of Shuffling SGD for Finite-Sum Minimization</h3>
+                </div>
+                <div class="abstract">
+                    <h4>Abstract:</h4>
+                    <p>
+                        In this talk, I will discuss the convergence rates of without-replacement stochastic gradient descent (also known as shuffling SGD) 
+                        for solving smooth strongly-convex finite-sum minimization problems. 
+                        The first part of the talk will focus on my work establishing convergence lower bounds, 
+                        particularly for SGD with Random Reshuffling and arbitrary permutation-based SGD. 
+                        I will present how these proposed lower bounds tightly match the existing upper bounds. 
+                        In the second part, I will introduce my ongoing research on shuffling SGD, 
+                        specifically investigating the convergence rates when the number of epochs is less than the condition number, κ.
+                    </p>
+                </div>
+            </div>
+    </div>
+    <br>
 </body>
 </html>
